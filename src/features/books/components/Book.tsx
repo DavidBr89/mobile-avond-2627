@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
 import MyText from "@/shared/components/MyText";
 
 const arr = [
