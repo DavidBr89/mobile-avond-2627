@@ -16,4 +16,10 @@ export interface TMResponse {
   _embedded: {
     events: TMEvent[];
   };
+  page: {
+    size: number;
+    totalElements: number;
+    totalPages: number;
+    number: number;
+  };
 }

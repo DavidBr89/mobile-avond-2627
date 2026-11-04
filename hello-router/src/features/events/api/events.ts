@@ -17,3 +17,16 @@ export const getEventById = async (id: string | string[]) => {
   const { data } = await ticketMasterApi.get<TMEvent>(`events/${id}`);
   return data;
 };
+
+export const getInfiniteEvents = async (pageParam: number) => {
+  const { data } = await ticketMasterApi.get<TMResponse>("events", {
+    params: {
+      countryCode: "BE",
+      postalCode: "9000",
+      page: pageParam,
+      size: 20,
+    },
+  });
+
+  return data;
+};

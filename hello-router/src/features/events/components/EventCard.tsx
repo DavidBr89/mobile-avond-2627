@@ -13,9 +13,10 @@ const EventCard = ({ event }: EventCardProps) => {
     <Link
       className="bg-amber-200"
       href={{
-        pathname: "/[id]",
+        pathname: "/events/[id]",
         params: {
           id: event.id,
+          title: event.name,
         },
       }}
       style={{ height: 300, padding: 8 }}>
