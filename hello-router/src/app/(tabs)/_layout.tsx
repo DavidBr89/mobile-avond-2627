@@ -16,6 +16,7 @@ const TabsLayout = () => {
         headerShown: false,
         tabBarStyle: { backgroundColor: "#612424" },
         tabBarActiveTintColor: "white",
+        tabBarLabelStyle: { fontFamily: "ScienceGothic" },
         headerStyle: { backgroundColor: "#612424" },
         headerTintColor: "white",
       }}>

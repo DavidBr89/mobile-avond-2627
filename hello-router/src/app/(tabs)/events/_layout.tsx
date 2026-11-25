@@ -9,6 +9,7 @@ const EventsLayout = () => {
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: "#612424" },
+        headerTitleStyle: { fontFamily: "ScienceGothic" },
         headerTintColor: "white",
         // headerShown: false,
       }}>

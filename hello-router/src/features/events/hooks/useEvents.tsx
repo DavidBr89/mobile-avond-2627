@@ -4,7 +4,7 @@ import { getEventById, getInfiniteEvents } from "../api/events";
 export const useEventById = (id: string | string[]) => {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["events", id],
-    queryFn: () => getEventById(id),
+    queryFn: ({ signal }) => getEventById(id, signal),
   });
 
   return {
@@ -26,7 +26,7 @@ export const useInfiniteEvents = () => {
     hasNextPage,
   } = useInfiniteQuery({
     queryKey: ["events", "infinite"],
-    queryFn: ({ pageParam }) => getInfiniteEvents(pageParam),
+    queryFn: ({ pageParam, signal }) => getInfiniteEvents(pageParam, signal),
     initialPageParam: 0,
     getNextPageParam: (lastPage) => {
       const next = lastPage.page.number + 1;

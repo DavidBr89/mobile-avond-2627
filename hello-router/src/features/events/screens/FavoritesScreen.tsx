@@ -1,6 +1,7 @@
 import { View, Text, FlatList } from "react-native";
 import { useFavorites } from "../context/useFavorites";
 import { useFavoritesStore } from "../store/useFavoritesStore";
+import MyText from "@/shared/components/MyText";
 
 const FavoritesScreen = () => {
   // Stap 5: Context te gebruiken
@@ -15,7 +16,7 @@ const FavoritesScreen = () => {
     <View>
       <FlatList
         data={favorites}
-        ListEmptyComponent={() => <Text>Geen favorieten!</Text>}
+        ListEmptyComponent={() => <MyText>Geen favorieten!</MyText>}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View>
